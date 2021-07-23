@@ -13,7 +13,8 @@
             callback('unable to find the location' , undefined)
         }
         else{
-            callback(undefined ,body.current.weather_descriptions[0]+ '.  it is currently '+ body.current.temperature +'  degree out. there is ' +  body.current.precip   +' chance of rain')
+            console.log(body.current.weather_descriptions)
+            callback(undefined ,body.current.weather_descriptions[0]+ '.  it is currently '+ body.current.temperature +'  degree out. there is ' +  body.current.precip   +' chance of rain . the humidity of today is ' + body.current.humidity +'%. today wind speed is'+body.current.wind_speed +'km/h.' )
         }
 
        })
